@@ -1,9 +1,8 @@
 import asyncio
-import sys
 
-from viam.components.sensor import Sensor
 from viam.module.module import Module
-from .sysfs_hcsr04 import HCSR04
+from viam.components.sensor import Sensor
+from .hcsr04 import HCSR04
 
 async def main():
     """This function creates and starts a new module, after adding all desired resources.

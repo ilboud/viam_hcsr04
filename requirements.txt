@@ -1,2 +1,2 @@
 viam-sdk
-python-periphery
+RPi.GPIO

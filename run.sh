@@ -1,8 +1,12 @@
-#!/bin/sh
-cd `dirname $0`
+#!/usr/bin/env bash
 
-pip install -r requirements.txt
+# bash safe mode. look at `set --help` to see what these are doing
+set -euxo pipefail 
+
+cd $(dirname $0)
+source .env
+./setup.sh
 
 # Be sure to use `exec` so that termination signals reach the python process,
 # or handle forwarding termination signals manually
-exec python3 -m src.main $@
+exec $PYTHON -m src.main $@
