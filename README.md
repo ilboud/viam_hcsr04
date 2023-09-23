@@ -1,28 +1,21 @@
-# sysfs_hcsr04 modular sensor component
+#hcsr04 modular sensor component
 
-*sysfs_hcsr04* is a Viam modular sensor component that provides distance readings from the HCSR04 ultrasonic sensor for boards that can use sysfs to interact with GPIO.
+*hcsr04* is a Viam modular sensor component that provides distance readings from the HCSR04 ultrasonic sensor for Pi boards with direct GPIO access.
 
-## Prerequisites
-
-``` bash
-sudo apt update && sudo apt upgrade -y
-sudo apt-get install python3
-sudo apt install python3-pip
-```
 
 ## API
 
-The sysfs_hcsr04 resource fulfills the Viam sensor interface
+The hcsr04 resource fulfills the Viam sensor interface
 
 ### get_readings()
 
-The *get_readings()* command takes no arguments, and returns the detected distance in meters (with the key 'distance').
+The *get_readings()* command takes no arguments, and returns the detected distance in centimeters (with the key 'distance').
 
 ## Viam Component Configuration
 
-This component should be configured as type *sensor*, model *viamlabs:sensor:sysfs-hcsr04*.
+This component should be configured as type *sensor*, model *ilboud:sensor:hcsr04*.
 
-The following attributes may be configured as sysfs_hcsr04 component config attributes.
+The following attributes may be configured as hcsr04 component config attributes.
 
 Example:
 
